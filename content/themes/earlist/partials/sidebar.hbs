@@ -1,0 +1,49 @@
+<aside class="sidebar">
+
+  {{#is "post"}}
+    <section class="widget">
+      <ul>
+        <li class="share-item twitter">
+          <a href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+              onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Twitter</a>
+        </li>
+        <li class="share-item facebook">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+              onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">Facebook</a>
+        </li>
+        <li class="share-item google-plus">
+          <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+             onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">Google+</a>
+        </li>
+      </ul>
+    </section>
+  {{/is}}
+
+  {{#get "posts" limit="3" as |recents|}}
+    <section class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        {{#foreach recents}}
+          <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+      </ul>
+    </section>
+  {{/get}}
+
+  <section class="widget widget-instagram">
+    <h3 class="widget-title">Instagram</h3>
+    <div id="instafeed"></div>
+  </section>
+
+  {{#get "tags" limit="all"}}
+    <section class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul>
+        {{#foreach tags}}
+          <li><a href="{{url}}">{{name}}</a></li>
+        {{/foreach}}
+      </ul>
+    </section>
+  {{/get}}
+
+</aside>

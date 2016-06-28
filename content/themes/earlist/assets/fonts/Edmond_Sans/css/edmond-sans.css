@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Edmondsans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Edmondsans-Bold'), local('Edmondsans Bold'),
+         url('../fonts/Edmondsans-Bold.otf'), format('opentype');
+}
+
+@font-face {
+    font-family: 'Edmondsans';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Edmondsans-Medium'), local('Edmondsans Medium'),
+         url('../fonts/Edmondsans-Medium.otf'), format('opentype');
+}
+
+@font-face {
+    font-family: 'Edmondsans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Edmondsans-Regular'), local('Edmondsans Regular'),
+         url('../fonts/Edmondsans-Regular.otf'), format('opentype');
+}
